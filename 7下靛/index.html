@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>下靛</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+
+        .back {
+            background-image: url('./下（分好_0016_已插入图像.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 0;
+        }
+
+        .back_door {
+            height: 100%;
+            width: 100%;
+            top: 0%;
+            position: absolute;
+            z-index: 0;
+        }
+
+        .back_crock {
+            height: 50%;
+            width: 80%;
+            left: 10%;
+            bottom: 0%;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .front_crock {
+            height: 40%;
+            width: 40%;
+            left: 30%;
+            bottom: 0%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .front_crock1{
+            height: 38%;
+            width: 40%;
+            left: 30%;
+            bottom: 0%;
+            position: absolute;
+            z-index: 4;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .music_sign {
+            height: 15%;
+            width: 5%;
+            right: 5%;
+            top: 5%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .shelf {
+            height: 65%;
+            width: 25%;
+            right: 5%;
+            bottom: 0%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .bow1 {
+            height: 10%;
+            width: 8%;
+            right: 13%;
+            top: 42%;
+            position: absolute;
+            z-index: 3;
+            display: block;
+        }
+
+        .bow2 {
+            height: 10%;
+            width: 15%;
+            right: 9%;
+            bottom: 20%;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .bow3 {
+            height: 55%;
+            width: 8%;
+            left: 50%;
+            top: 30%;
+            position: absolute;
+            z-index: 3;
+            display: none;
+        }
+
+        .guide {
+            height: 50%;
+            width: 15%;
+            left: 20%;
+            top: 10%;
+            position: absolute;
+            z-index: 2;
+            animation: guide_show 3s;
+        }
+
+        @keyframes guide_show {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .arrowhead {
+            height: 10%;
+            width: 20%;
+            right: 20%;
+            bottom: 68%;
+            position: absolute;
+            z-index: 2;
+        }
+        .round{
+            height: 15%;
+            width: 8%;
+            right: 15%;
+            top: 35%;
+            position: absolute;
+            z-index: 4;
+            animation: round_show 2s infinite;
+        }
+        .round1{
+            height: 15%;
+            width: 8%;
+            left: 50%;
+            top: 30%;
+            position: absolute;
+            z-index: 4;
+            animation: round_show 2s infinite;
+            display: none;
+        }
+        
+        @keyframes round_show {
+            50%{
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+        $(".round").mousedown(function () {
+            $(".round").fadeToggle();
+            $(".bow1").animate({right:'13%',top:'30%'},"slow").animate({left:'50%',top:'30%'},"slow");
+            $(".round1").css("display","block");
+        });
+        function change(){
+            $(".bow1 img").css("opacity","0");
+        };
+        $(".round1").mousedown(function () {
+                $(".bow1").css("display", "none");
+                $(".bow3").css("display", "block");
+                $(".round1").css("display","none");
+                countDown();
+        });
+    });
+    </script>
+    <script type="text/javascript">  
+        function countDown(){
+            //三秒之后跳转页面
+            setTimeout("location.href='../8浸染/index.html'",3000);
+                    //setTimeout("location.href='index.html'",3000);
+        }
+        //执行跳转页面函数
+        
+    </script> 
+</head>
+<body>
+    <div class="back"></div>
+    <div class="back_door"><img src="./下（分好_0015_已插入图像.png"></div>
+    <div class="back_crock"><img src="./下（分好_0014_后缸.png"></div>
+    <div class="front_crock"><img src="./下（分好_0013_前缸.png"></div>
+    <div class="music_sign"><img src="./下（分好_0000_音乐.png"></div>
+    <div class="shelf"><img src="./下（分好_0012_架子.png"></div>
+    <div class="bow1"><img src="./下（分好_0010_靛.png"></div>
+    <div class="bow2"><img src="./下（分好_0011_成分.png"></div>
+    <div class="guide"><img src="./下（分好_0003_文字.png"></div>
+    <div class="arrowhead"><img src="./下（分好_0001_指示箭头.png"></div>
+    <div class="bow3"><img src="./下（分好_0009_下靛.png"></div>
+    <div class="front_crock1"><img src="./下（分好_0008_前缸.png"></div>
+    <div class="round"><img src="./下（分好_0002_指示圈.png"></div>
+    <div class="round1"><img src="./下（分好_0002_指示圈.png"></div>
+</body>
+</html>

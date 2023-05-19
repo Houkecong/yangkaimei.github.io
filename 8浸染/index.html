@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>浸染</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+    .back {
+        background-image: url('./大门（分好_0006_背景.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .back_door {
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        position: absolute;
+        z-index: 0;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .crock {
+        height: 40%;
+        width: 80%;
+        left: 10%;
+        bottom: 0%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .crock_back {
+        height: 40%;
+        width: 40%;
+        left: 30%;
+        bottom: 0%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .crock_front {
+        height: 37%;
+        width: 40%;
+        left: 30%;
+        bottom: 0%;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .stick {
+        height: 5%;
+        width: 80%;
+        left: 10%;
+        top: 36%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .shadow {
+        height: 23%;
+        width: 70%;
+        left: 15%;
+        bottom: 0%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .cloth {
+        height: 42%;
+        width: 25%;
+        left: 35%;
+        top: 35%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .music_sign {
+        height: 15%;
+        width: 5%;
+        right: 5%;
+        top: 5%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .guide {
+        height: 50%;
+        width: 15%;
+        left: 15%;
+        top: 10%;
+        position: absolute;
+        z-index: 2;
+        animation: guide_show 3s;
+    }
+
+    @keyframes guide_show {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .round {
+        height: 15%;
+        width: 8%;
+        right: 10%;
+        top: 32%;
+        position: absolute;
+        z-index: 4;
+        animation: round_show 2s infinite;
+    }
+
+    @keyframes round_show {
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .arrow {
+        height: 40%;
+        width: 3%;
+        right: 12%;
+        top: 50%;
+        position: absolute;
+        z-index: 4;
+    }
+
+    @keyframes fadein {
+        100% {
+            opacity: 0;
+        }
+    }
+</style>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+   $(document).ready(function () {
+            $(".round").click(function () {
+                $(".round").css("animation","fadein 1.5s").css("opacity",0);
+                var y1=$(".stick").position().top;
+                var y2=$(".cloth").position().top;
+                var y=150;
+                $(".stick").animate({top:y1+y+"px"},"slow");
+                $(".cloth").animate({top:y2+y+"px"},"slow");
+                $(".cloth img").attr("src","./浸（分好_0000s_0000s_0001s_0000_较深花纹1.png");
+                $(".stick").animate({top:y1+"px"},"slow");
+                $(".cloth").animate({top:y2+"px"},"slow");
+                $(".round").css("animation","fadein 1.5s").css("opacity",1);
+                $(".round").click(function () {
+                    $(".round").css("animation","fadein 1.5s").css("opacity",0);
+                    var y1=$(".stick").position().top;
+                    var y2=$(".cloth").position().top;
+                    var y=150;
+                    $(".stick").animate({top:y1+y+"px"},"slow");
+                    $(".cloth").animate({top:y2+y+"px"},"slow");
+                    $(".cloth img").attr("src","./浸（分好_0000s_0000s_0000s_0000_深色花纹1.png");
+                    $(".stick").animate({top:y1+"px"},"slow");
+                    $(".cloth").animate({top:y2+"px"},"slow");
+                    $(".round").css("animation","fadein 1.5s").css("opacity",1);
+                    countDown();
+
+            });
+            });
+        });
+</script>
+<script type="text/javascript">  
+        function countDown(){
+            //三秒之后跳转页面
+            setTimeout("location.href='../9洗涤/index.html'",3000);
+                    //setTimeout("location.href='index.html'",3000);
+        }
+        //执行跳转页面函数
+        
+    </script> 
+<body>
+    <div class="back"></div>
+    <div class="back_door"><img src="./浸（分好_0000s_0005_已插入图像.png"></div>
+    <div class="crock"><img src="./浸（分好_0000s_0004_图层-26.png"></div>
+    <div class="crock_back"><img src="./浸（分好_0000s_0003_前缸.png"></div>
+    <div class="crock_front"><img src="./浸（分好_0000s_0001_前缸.png"></div>
+    <div class="stick"><img src="./浸（分好_0000s_0002_杆子.png"></div>
+    <div class="shadow"><img src="./浸（分好_0000s_0000_阴影.png"></div>
+    <div class="cloth"><img src="./浸（分好_0000s_0000s_0002s_0000_浅色花纹1.png"></div>
+    <div class="music_sign"><img src="./浸（分好_0000_音乐.png"></div>
+    <div class="guide"><img src="./浸（分好_0003_文字.png"></div>
+    <div class="round"><img src="./浸（分好_0002_圆环.png"></div>
+    <div class="arrow"><img src="./浸（分好_0001_箭头.png"></div>
+</body>
+
+</html>

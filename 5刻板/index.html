@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蓝印</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        // 拖动
+        document.addEventListener("dragstart", function(event) {
+
+            event.dataTransfer.setData("Text", event.target.id);
+            // document.getElementById("demo").innerHTML = "开始拖动 p 元素";
+        });
+        /* 拖动完成时触发*/
+        document.addEventListener("dragover", function(event) {
+             event.preventDefault();
+        });
+        document.addEventListener("drop", function(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+            // document.getElementById("demo").innerHTML = "p 元素已被拖动";
+        });
+        
+
+		$(function () {
+			var knief = $(".leaf")
+			var a = 0;
+			var is_collect = false
+
+			for (var i = 0; i < knief.length; i++) {
+				$(knief[i]).bind("touchstart", function (e) {
+					sign_disappear();
+				})
+				$(knief[i]).bind("touchmove", function (e) {
+					$(this).css("left", e.touches[0].clientX)
+					$(this).css("top", e.touches[0].clientY)
+					if (e.touches[0].clientX > 170 && e.touches[0].clientX < 320) {
+						if (e.touches[0].clientY > 1300 && e.touches[0].clientY < 1500) {
+							is_collect = true;
+						}
+					}
+				})
+				$(knief[i]).bind("touchend", function (e) {
+					if (is_collect == true) {
+						$(this).css("display", "none")
+						collect();
+					}
+				})
+			}
+			function sign_disappear() {
+				$("#sign").css("display", "none");
+			}
+			function collect() {
+				a++;
+				if (a == 1) {
+					$("#knief").css("width", "100px")
+					$("#knief").css("height", "70px")
+					$("#knief").css("top", "10%")
+					$("#knief").css("left", "35%")
+				}
+				if (a == 2) {
+					$("#knief").css("width", "150px")
+					$("#knief").css("height", "105px")
+					$("#knief").css("top", "6%")
+					$("#knief").css("left", "25%")
+				}
+				if (a == 3) {
+					$("#knief").css("width", "200px")
+					$("#knief").css("height", "140px")
+					$("#knief").css("top", "3%")
+					$("#knief").css("left", "15%")
+				}
+				if (a == 4) {
+					$("#knief").css("width", "250px")
+					$("#knief").css("height", "175px")
+					$("#knief").css("top", "0%")
+					$("#knief").css("left", "5%")
+					$("#line_2").css("display", "block")
+					$('#click2').addClass('click3')
+				}
+			}
+			$("#basket").click(function () {
+				if (a >= 4) {
+					window.location.assign("zir.html");
+				}
+			});
+
+
+		});
+	
+
+    </script>
+
+<script type="text/javascript">  
+	function countDown(){
+		//三秒之后跳转页面
+		setTimeout("location.href='../7下靛/index.html'",3000);
+                //setTimeout("location.href='index.html'",3000);
+	}
+	//执行跳转页面函数
+	countDown();
+</script> 
+
+</head>
+<body>
+    <div class="pic">
+        <div class="bbg">
+            
+        </div>
+        <div class="table">
+
+        </div>
+        <div class="fbg">
+
+        </div>
+        <div class="tool">
+            
+        </div>
+        <div class="paper">
+
+        </div>
+        <div class="pan">
+            <img class="leaf" src="knief.png" alt="">
+            </div>
+        <!-- <img src="bbg.png" alt="" class="bbg">
+        <img src="zhuo.png" alt="" class="table"> -->
+    </div>
+    
+</body>
+</html>

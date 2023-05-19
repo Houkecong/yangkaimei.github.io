@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>洗涤</title>
+</head>
+
+<style>
+    body {
+
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+    .back {
+        background-image: url('./洗涤（分好_0000s_0000s_0002_地.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .cloth_back {
+        height: 27%;
+        width: 27%;
+        left: 18%;
+        top: 0%;
+        z-index: 1;
+        position: absolute;
+
+    }
+
+    .cloth_front {
+        height: 78%;
+        width: 30%;
+        left: 0%;
+        top: 0%;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .guide {
+        height: 50%;
+        width: 12%;
+        left: 10%;
+        top: 16%;
+        position: absolute;
+        z-index: 3;
+        animation: guide_show 3s;
+    }
+
+    @keyframes guide_show {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .music_sign {
+        height: 15%;
+        width: 5%;
+        right: 5%;
+        top: 5%;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .rock {
+        height: 15%;
+        width: 25%;
+        left: 45%;
+        top: 42%;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .tong {
+        height: 25%;
+        width: 12%;
+        left: 57%;
+        top: 32%;
+        position: absolute;
+        z-index: 4;
+    }
+
+    .cloth1 {
+        height: 19%;
+        width: 8%;
+        left: 58%;
+        top: 35%;
+        position: absolute;
+        z-index: 5;
+    }
+
+
+    .cloth2 {
+        height: 18%;
+        width: 35%;
+        left: 48%;
+        top: 60%;
+        position: absolute;
+        z-index: 5;
+        display: none;
+    }
+
+    #arrow {
+        height: 30%;
+        width: 8%;
+        left: 48%;
+        top: 32%;
+        position: absolute;
+        z-index: 6;
+    }
+
+    .round {
+        height: 15%;
+        width: 7%;
+        left: 57%;
+        top: 28%;
+        position: absolute;
+        z-index: 6;
+        animation: change 2s infinite;
+    }
+
+    .round1 {
+        height: 15%;
+        width: 7%;
+        left: 48%;
+        top: 60%;
+        position: absolute;
+        z-index: 6;
+        animation: change 2s infinite;
+        display: none;
+    }
+
+    @keyframes change {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+</style>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".round").mousedown(function () {
+            $(".round").fadeToggle();
+            $(".cloth1").animate({ left: '48%', top: '35%' }, "slow").animate({ left: '48%', top: '58%' }, "slow");
+            $(".round1").css("display", "block");
+        });
+
+        $(".round1").mousedown(function () {
+            $(".cloth1").css("display", "none");
+            $(".cloth2").css("display", "block");
+            $(".round1").css("display", "none");
+countDown();
+        });
+    });
+</script>
+
+<body>
+    <div class="back"></div>
+    <div class="cloth_back"><img src="./洗涤（分好_0000s_0000s_0001_背景布后.png"></div>
+    <div class="cloth_front"><img src="./洗涤（分好_0000s_0000s_0000_背景布前.png"></div>
+    <div class="guide"><img src="./洗涤（分好_0000_文字.png"></div>
+    <div class="music_sign"><img src="./洗涤（分好_0002_音乐.png"></div>
+    <div class="rock"><img src="./洗涤（分好_0000s_0009_石板.png"></div>
+    <div class="tong"><img src="./洗涤（分好_0000s_0008_桶.png"></div>
+    <div id="arrow"><img src="./洗涤（分好_0001_指示箭头.png"></div>
+    <div class="cloth1"><img src="./洗涤（分好_0000s_0006_挂布花纹1.png"></div>
+    <div class="cloth2"><img src="./洗涤（分好_0000s_0002_布花纹1（河里.png"></div>
+    <div class="round"><img src="./洗涤（分好_0003_指示圈.png"></div>
+    <div class="round1"><img src="./洗涤（分好_0003_指示圈.png"></div>
+</body>
+
+</html>

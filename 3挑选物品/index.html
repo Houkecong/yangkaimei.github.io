@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>挑选物品</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+    .back {
+        background-image: url('./_0009_已插入图像.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .shelf_back {
+        height: 85%;
+        width: 35%;
+        top: 15%;
+        left: 30%;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .shelf {
+        height: 100%;
+        width: 80%;
+        top: 0%;
+        left: 10%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .cloth {
+        height: 40%;
+        width: 86.5%;
+        left: 4%;
+        top: 0%;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .scanf {
+        height: 42%;
+        width: 10%;
+        left: 31.5%;
+        top: 19%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .scanf1 {
+        height: 42%;
+        width: 10%;
+        left: 31.5%;
+        top: 19%;
+        position: absolute;
+        z-index: 5;
+    }
+
+    .hat {
+        height: 18%;
+        width: 20%;
+        left: 31.5%;
+        top: 65.5%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .hat1 {
+        height: 18%;
+        width: 20%;
+        left: 31.5%;
+        top: 65.5%;
+        position: absolute;
+        z-index: 5;
+    }
+
+    .bag {
+        height: 23%;
+        width: 12%;
+        left: 43.5%;
+        top: 21.5%;
+        position: absolute;
+        z-index: 2;
+
+    }
+
+
+    .bag1 {
+        height: 23%;
+        width: 12%;
+        left: 43.5%;
+        top: 21.5%;
+        position: absolute;
+        z-index: 5;
+    }
+
+    .decoration {
+        height: 30%;
+        width: 24%;
+        left: 44.8%;
+        top: 42%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .shadow {
+        height: 100%;
+        width: 92%;
+        left: 1.2%;
+        top: 0%;
+        position: absolute;
+        z-index: 3;
+
+    }
+
+    .line {
+        height: 100%;
+        width: 76.3%;
+        left: 10%;
+        top: 0%;
+        position: absolute;
+        z-index: 4;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+
+    }
+</style>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".bag1").mouseover(function () {
+            $(".bag img").css("filter", "drop-shadow(0px 0px 30px white)").css("transform", "scale(1.1)");
+        });
+        $(".bag1").mouseout(function () {
+            $(".bag img").css("filter", "").css("transform", "scale(1)");
+        });
+        $(".hat1").mouseover(function () {
+            $(".hat img").css("filter", "drop-shadow(0px 0px 30px white)").css("transform", "scale(1.1)");
+        });
+        $(".hat1").mouseout(function () {
+            $(".hat img").css("filter", "").css("transform", "scale(1)");
+        });
+        $(".scanf1").mouseover(function () {
+            $(".scanf img").css("filter", "drop-shadow(0px 0px 30px white)").css("transform", "scale(1.1)");
+        });
+        $(".scanf1").mouseout(function () {
+            $(".scanf img").css("filter", "").css("transform", "scale(1)");
+        });
+    });
+    function choose(n) {
+        if (n == 1) {
+            var object = "hat";
+        }
+        if (n == 2) {
+            var object = "bag";
+        }
+        if (n == 3) {
+            var object = "scanf";
+        }
+        location.assign("../4挑选纹样/index.html");
+    };
+</script>
+
+<body>
+    <div class="back"></div>
+    <div class="shelf"><img src="./_0005_柜子.png"></div>
+    <div class="shelf_back"><img src="./_0007_柜子内.png"></div>
+    <div class="cloth"><img src="./_0008_布.png"></div>
+    <div class="hat"><img src="./_0002_帽子.png"></div>
+    <div class="bag"><img src="./_0006_包.png"></div>
+    <div class="scanf"><img src="./_0003_围巾.png"></div>
+    <div class="shadow"><img src="./_0001_阴影.png"></div>
+    <div class="line"><img src="./_0000_线稿.png"></div>
+    <div class="decoration"><img src="./_0004_装饰.png"></div>
+    <div class="bag1" onclick="choose(2)"></div>
+    <div class="hat1" onclick="choose(1)"></div>
+    <div class="scanf1" onclick="choose(3)"></div>
+</body>
+
+</html>
